@@ -46,7 +46,21 @@
 </template>
 
 <script>
+import pdfJson from '@/static/json/pdfData.json'
 export default {
-  name: 'NuxtTutorial'
+  name: 'NuxtTutorial',
+  data() {
+    return {
+      pdfJson
+    }
+},
+async asyncData({isDev, route, store, env, params, query, req, res, redirect, error}) {
+  let { data } = await axios.get('https://api.myjson.com/bins/mr6ma')
+
+  return { info: data }
+},
+mounted(){
+  console.log(pdfJson)
+}
 }
 </script>
