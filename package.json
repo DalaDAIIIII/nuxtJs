@@ -10,6 +10,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "core-js": "^3.19.3",
     "element-ui": "^2.15.6",
     "nuxt": "^2.15.8",
@@ -20,7 +23,7 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.3.0",
-    "babel-core": "7.0.0-bridge.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^27.4.4",
     "jest": "^27.4.4",
     "vue-jest": "^3.0.4"
