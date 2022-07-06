@@ -5,13 +5,17 @@ const cookieparser = process.server ? require('cookieparser') : undefined
 export const state = () => {
   return {
     // 当前登录用户的登录状态
-    user: null
+    user: null,
+    reportData: {}
   }
 }
 
 export const mutations = {
   setUser(state, data) {
     state.user = data
+  },
+  setReportData(state, data) {
+    state.reportData = data
   }
 }
 
@@ -39,5 +43,8 @@ export const actions = {
 
     // 提交 mutation 修改 state 状态
     commit('setUser', user)
+  },
+  reportDataInit(store, data) {
+    store.commit('setReportData', data)
   }
 }

@@ -136,10 +136,11 @@ import {
 } from '@/api/article'
 import { getTags } from '@/api/tag'
 import { mapState } from 'vuex'
-
+import jsonData from '@/static/json/pdfData.json'
 export default {
   name: 'HomeIndex',
-  async asyncData({ query }) {
+
+  async asyncData({ isDev, route, store, env, params, query, req, res, redirect, error }) {
     const page = Number.parseInt(query.page || 1)
     const limit = 20
     const tab = query.tab || 'global_feed'
@@ -162,6 +163,9 @@ export default {
     const { tags } = tagRes.data
 
     articles.forEach(article => article.favoriteDisabled = false)
+
+    store.dispatch("reportDataInit", jsonData);
+    console.log(jsonData)
 
     return {
       articles, // 文章列表
