@@ -1,0 +1,39 @@
+// @function pxToMm ($px) {
+//   @return ($px / 96 * 25.4) + mm;
+// }
+
+// @function pxToMm ($px) {
+//   @return (578.6 / 1640 * $px) + mm;
+// }
+
+// @function pxToMm ($px) {
+//   @return (335 / 950 * $px) + mm;
+// }
+
+.mix-display-flex {
+  display: flex;
+  display: -webkit-box;
+}
+
+.mix-flex-direction-row {
+  flex-direction: row;
+//   -webkit-box-orient: horizontal;
+//   -webkit-box-direction: normal;
+}
+
+.mix-flex-direction-row-reverse {
+  flex-direction: row-reverse;
+//   -webkit-box-orient: horizontal;
+//   -webkit-box-direction: reverse;
+}
+
+.mix-align-items-center {
+  align-items: center;
+//   -webkit-box-align: center;
+}
+
+.mix-flex-wrap-nowrap {
+    flex-wrap: nowrap;
+    // -webkit-flex-wrap: nowrap;
+}
+
